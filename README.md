@@ -2,6 +2,8 @@
 
 Opinionated, small, fast extension for reddit.
 
+## Install
+
 Chrome: TODO
 
 Firefox: TODO
