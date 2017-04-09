@@ -25,6 +25,7 @@
     "extricate-loader": "1.0.0",
     "file-loader": "0.11.1",
     "firefox-extension-deploy": "1.1.0",
+    "flow-bin": "0.43.1",
     "inert-entry-webpack-plugin": "2.0.0",
     "interpolate-loader": "1.0.0",
     "progress-bar-webpack-plugin": "1.9.3",
