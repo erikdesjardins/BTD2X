@@ -26,6 +26,6 @@ Opera: use [this](https://addons.opera.com/en/extensions/details/download-chrome
 
 - Replace RES
   - I will continue working on it until reddit dies (presumably)
-- Add options for every use-case
-  - "Opinionated" is not a complement, but a warning
+- Support every use-case
+  - "Opinionated" is not an endorsement, but a warning
   - I will probably not accept any request for additional options
