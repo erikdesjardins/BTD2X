@@ -1,3 +1,5 @@
+/* @flow */
+
 export function wrapSingleResult(fn) {
 	return (...args) =>
 		new Promise((resolve, reject) =>

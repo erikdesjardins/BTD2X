@@ -1,3 +1,5 @@
+/* eslint-disable import/no-commonjs, import/no-nodejs-modules */
+
 const path = require('path');
 
 const InertEntryPlugin = require('inert-entry-webpack-plugin');
