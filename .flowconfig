@@ -4,6 +4,7 @@
 [include]
 
 [libs]
+./flow
 
 [options]
 module.use_strict=true

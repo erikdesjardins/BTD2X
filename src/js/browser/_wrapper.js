@@ -1,6 +1,6 @@
 /* @flow */
 
-export function wrapSingleResult(fn) {
+export function wrapSingleResult(fn: (...args: mixed[]) => void): (...args: mixed[]) => Promise<any> {
 	return (...args) =>
 		new Promise((resolve, reject) =>
 			fn(...args, result => {

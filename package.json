@@ -20,6 +20,10 @@
     "flow": "flow"
   },
   "devDependencies": {
+    "babel-core": "6.24.1",
+    "babel-eslint": "7.2.1",
+    "babel-loader": "6.4.1",
+    "babel-plugin-transform-flow-strip-types": "6.22.0",
     "chrome-extension-deploy": "3.0.0",
     "cross-env": "4.0.0",
     "eslint": "3.19.0",

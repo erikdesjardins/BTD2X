@@ -1,4 +1,5 @@
 {
+	"parser": "babel-eslint",
 	"plugins": [
 		"flowtype",
 		"import"
@@ -7,13 +8,6 @@
 		"import/ignore": [
 			"node_modules"
 		]
-	},
-	"parserOptions": {
-		"ecmaVersion": 8,
-		"sourceType": "module",
-		"ecmaFeatures": {
-			"impliedStrict": true
-		}
 	},
 	"env": {
 		"browser": true,
@@ -70,7 +64,7 @@
 			{ "target": "./src/js/modules", "from": "./src/js/modules" },
 			{ "target": "./src/js/browser", "from": "./src/js/modules" }
 		] }],
-		"import/no-unassigned-import": 2,
+		"import/no-unassigned-import": 0,
 		"import/no-unresolved": 2,
 		"import/order": 2,
 		"import/prefer-default-export": 0,
@@ -145,6 +139,7 @@
 		"sort-vars": 0,
 		"sort-imports": 0, // see sort-imports-es6/sort-imports-es6
 		"space-before-function-paren": [2, "never"],
+		"spaced-comment": [2, "always", { "markers": [":", "::"] }],
 		"strict": [2, "never"], // Babel inserts it for us
 		"valid-jsdoc": [2, { "requireParamDescription": false, "prefer": { "return": "returns" } }],
 		"vars-on-top": 0,
