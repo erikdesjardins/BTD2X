@@ -6,7 +6,7 @@ const InertEntryPlugin = require('inert-entry-webpack-plugin');
 const ZipPlugin = require('zip-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
-module.exports = ({ production = false, zip = false }) => ({
+module.exports = ({ production = false, zip = false } = {}) => ({
 	entry: 'extricate-loader!interpolate-loader!./src/manifest.json',
 	bail: production,
 	output: {
