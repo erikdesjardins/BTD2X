@@ -22,6 +22,9 @@
   "devDependencies": {
     "chrome-extension-deploy": "3.0.0",
     "cross-env": "4.0.0",
+    "eslint": "3.19.0",
+    "eslint-plugin-flowtype": "2.30.4",
+    "eslint-plugin-import": "2.2.0",
     "extricate-loader": "1.0.0",
     "file-loader": "0.11.1",
     "firefox-extension-deploy": "1.1.0",

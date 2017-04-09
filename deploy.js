@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable import/no-nodejs-modules, import/no-commonjs, strict, no-console */
 
 'use strict';
 
@@ -13,10 +13,10 @@ deployChrome({
 	clientSecret: process.env.CHROME_CLIENT_SECRET,
 	refreshToken: process.env.CHROME_REFRESH_TOKEN,
 	id: 'obbjmeopodlheliibjoabgbmchpecjaj',
-	zip: fs.readFileSync(path.join(__dirname, 'dist/BTD2X.zip'))
-}).then(function() {
+	zip: fs.readFileSync(path.join(__dirname, 'dist/BTD2X.zip')),
+}).then(() => {
 	console.log('Chrome deploy complete!');
-}, function(err) {
+}, err => {
 	console.error('Chrome failed:', err);
 	process.exitCode = 1;
 });
@@ -26,10 +26,10 @@ deployFirefox({
 	secret: process.env.FIREFOX_SECRET,
 	id: manifest.applications.gecko.id,
 	version: manifest.version,
-	src: fs.createReadStream(path.join(__dirname, 'dist/BTD2X.zip'))
-}).then(function() {
+	src: fs.createReadStream(path.join(__dirname, 'dist/BTD2X.zip')),
+}).then(() => {
 	console.log('Firefox deploy complete!');
-}, function(err) {
+}, err => {
 	console.error('Firefox failed:', err);
 	process.exitCode = 1;
 });

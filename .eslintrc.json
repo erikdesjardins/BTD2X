@@ -1,0 +1,153 @@
+{
+	"plugins": [
+		"flowtype",
+		"import"
+	],
+	"settings": {
+		"import/ignore": [
+			"node_modules"
+		]
+	},
+	"parserOptions": {
+		"ecmaVersion": 8,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"impliedStrict": true
+		}
+	},
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true
+	},
+	"extends": ["eslint:all"],
+	"rules": {
+		"flowtype/boolean-style": 2,
+		"flowtype/define-flow-type": 2,
+		"flowtype/delimiter-dangle": [2, "always-multiline"],
+		"flowtype/generic-spacing": 2,
+		"flowtype/no-dupe-keys": 2,
+		"flowtype/no-primitive-constructor-types": 2,
+		"flowtype/no-weak-types": [2, { "any": false }],
+		"flowtype/object-type-delimiter": 0,
+		"flowtype/require-parameter-type": 0,
+		"flowtype/require-return-type": 0,
+		"flowtype/require-valid-file-annotation": 2, // this is the only rule that really works, since we use comments
+		"flowtype/require-variable-type": 0,
+		"flowtype/semi": 2,
+		"flowtype/sort-keys": 0,
+		"flowtype/space-after-type-colon": 2,
+		"flowtype/space-before-generic-bracket": 2,
+		"flowtype/space-before-type-colon": 2,
+		"flowtype/type-id-match": [2, "^([A-Z][a-z0-9]+)+$"],
+		"flowtype/union-intersection-spacing": 2,
+		"flowtype/use-flow-type": 0,
+		"flowtype/valid-syntax": 2,
+
+		"import/default": 2,
+		"import/export": 2,
+		"import/extensions": [2, "always", { "js": "never" }],
+		"import/first": 2,
+		"import/max-dependencies": 0,
+		"import/named": 2,
+		"import/namespace": 2,
+		"import/newline-after-import": 2,
+		"import/no-absolute-path": 2,
+		"import/no-amd": 2,
+		"import/no-commonjs": 2,
+		"import/no-deprecated": 2,
+		"import/no-duplicates": 2,
+		"import/no-dynamic-require": 2,
+		"import/no-extraneous-dependencies": 2,
+		"import/no-internal-modules": 0,
+		"import/no-mutable-exports": 2,
+		"import/no-named-as-default-member": 2,
+		"import/no-named-as-default": 2,
+		"import/no-named-default": 2,
+		"import/no-namespace": 2,
+		"import/no-nodejs-modules": 2,
+		"import/no-restricted-paths": [2, { "zones": [
+			{ "target": "./src/js/modules", "from": "./src/js/modules" },
+			{ "target": "./src/js/browser", "from": "./src/js/modules" }
+		] }],
+		"import/no-unassigned-import": 2,
+		"import/no-unresolved": 2,
+		"import/order": 2,
+		"import/prefer-default-export": 0,
+		"import/unambiguous": 0,
+
+		"no-confusing-arrow": 0,
+		"no-empty-function": [2, { "allow": ["arrowFunctions"] }],
+		"no-extra-parens": [2, "functions"], // "all" conflicts with no-return-assign and some other rules, unfortunately
+		"no-implicit-coercion": [2, { "boolean": false }],
+		"no-inline-comments": 0,
+		"no-invalid-this": 0,
+		"linebreak-style": 0,
+		"no-plusplus": 0,
+		"no-process-env": 0,
+		"no-process-exit": 0,
+		"no-prototype-builtins": 0,
+		"no-restricted-imports": 0,
+		"no-restricted-modules": 0,
+		"no-restricted-syntax": [2, "ForStatement", "ForInStatement"], // use for..of or Array.prototype methods
+		"no-shadow": 0,
+		"no-sync": 0,
+		"no-tabs": 0,
+		"no-ternary": 0,
+		"no-underscore-dangle": 0,
+		"no-use-before-define": [2, "nofunc"],
+		"no-magic-numbers": 0,
+
+		"array-callback-return": 0,
+		"arrow-parens": [2, "as-needed"],
+		"brace-style": [2, "1tbs", { "allowSingleLine": true }],
+		"callback-return": 0,
+		"capitalized-comments": 0,
+		"class-methods-use-this": 0,
+		"comma-dangle": [2, "always-multiline"],
+		"consistent-return": 0, // Flow is better
+		"consistent-this": [2, "this"], // do not alias `this`, use arrow functions
+		"curly": [2, "multi-line"],
+		"dot-location": [2, "property"],
+		"func-style": [2, "declaration"],
+		"generator-star-spacing": [2, { "before": false, "after": true }],
+		"id-length": 0,
+		"indent": [2, "tab", { "SwitchCase": 1 }],
+		"init-declarations": 0,
+		"line-comment-position": 0,
+		"lines-around-comment": [2, { "allowBlockStart": true }],
+		"max-depth": 0,
+		"max-len": 0,
+		"max-lines": 0,
+		"max-nested-callbacks": 0,
+		"max-params": 0,
+		"max-statements": 0,
+		"multiline-ternary": 0,
+		"new-cap": 2,
+		"newline-after-var": [0, "never"],
+		"newline-before-return": 0,
+		"newline-per-chained-call": 0,
+		"object-curly-newline": 0,
+		"object-curly-spacing": [2, "always"],
+		"object-property-newline": [2, { "allowMultiplePropertiesPerLine": true }],
+		"one-var": [2, { "initialized": "never" }],
+		"one-var-declaration-per-line": [2, "initializations"],
+		"operator-assignment": [2, "always"],
+		"operator-linebreak": [2, "after"],
+		"padded-blocks": [2, "never"],
+		"prefer-reflect": [2, { "exceptions": ["getOwnPropertyNames"] }],
+		"quote-props": [2, "as-needed"],
+		"quotes": [2, "single"],
+		"id-match": 0,
+		"id-blacklist": 0,
+		"require-jsdoc": 0,
+		"sort-keys": 0,
+		"sort-vars": 0,
+		"sort-imports": 0, // see sort-imports-es6/sort-imports-es6
+		"space-before-function-paren": [2, "never"],
+		"strict": [2, "never"], // Babel inserts it for us
+		"valid-jsdoc": [2, { "requireParamDescription": false, "prefer": { "return": "returns" } }],
+		"vars-on-top": 0,
+		"wrap-iife": [2, "inside"]
+	}
+}
