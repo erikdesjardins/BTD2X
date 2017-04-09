@@ -30,6 +30,6 @@ module.exports = ({ production = false, zip = false } = {}) => ({
 	plugins: [
 		new ProgressBarPlugin(),
 		new InertEntryPlugin(),
-		(zip && new ZipPlugin({ filename: 'no-emoji.zip' })),
+		(zip && new ZipPlugin({ filename: 'BTD2X.zip' })),
 	].filter(x => x),
 });
