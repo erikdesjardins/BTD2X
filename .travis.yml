@@ -3,7 +3,7 @@ node_js: 7
 script:
   - yarn run build
   - yarn run lint
-  - yarn run flow
+  - yarn run flow -- check --show-all-errors
 branches:
   only:
     - master
