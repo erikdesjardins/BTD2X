@@ -11,11 +11,11 @@
   "license": "GPL-3.0",
   "scripts": {
     "prestart": "rimraf dist",
-    "start": "cross-env NODE_ENV=development webpack --watch",
+    "start": "cross-env webpack --watch",
     "preonce": "rimraf dist",
-    "once": "cross-env NODE_ENV=development webpack",
+    "once": "cross-env webpack",
     "prebuild": "rimraf dist",
-    "build": "cross-env NODE_ENV=production webpack",
+    "build": "cross-env webpack --env.production --env.zip",
     "lint": "eslint .",
     "flow": "flow"
   },
