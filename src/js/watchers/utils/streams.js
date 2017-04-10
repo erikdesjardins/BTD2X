@@ -20,20 +20,17 @@ class Stream<InputT, T> {
 		}
 	}
 
-	_maybeDetach() {
+	_detachChild(child: Stream<T, any>) {
+		const index = this._children.indexOf(child);
+		if (index === -1) throw new Error('child is not attached');
+		this._children.splice(index, 1);
+
 		if (
 			this._listeners.length === 0 &&
 			this._children.length === 0
 		) {
 			this._detach();
 		}
-	}
-
-	_detachChild(child: Stream<T, any>) {
-		const index = this._children.indexOf(child);
-		if (index === -1) throw new Error('child is not attached');
-		this._children.splice(index, 1);
-		this._maybeDetach();
 	}
 
 	_accept(x: InputT) {
