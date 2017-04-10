@@ -31,7 +31,4 @@ TODO
 ## Non-Goals
 
 - Replace RES
-  - I will continue working on it until reddit dies (presumably)
-- Support every use-case
-  - "Opinionated" is not an endorsement, but a warning
-  - I will probably not accept any request for additional options
+- Add options for every use-case
