@@ -2,14 +2,6 @@
 
 Opinionated, small, fast extension for reddit.
 
-## Install
-
-Chrome: TODO
-
-Firefox: TODO
-
-Opera: use [this](https://addons.opera.com/en/extensions/details/download-chrome-extension-9/) to install the Chrome extension
-
 ## Goals
 
 - No observable loading
@@ -23,8 +15,3 @@ Opera: use [this](https://addons.opera.com/en/extensions/details/download-chrome
   - don't rely on URL for post type
   - don't rely on posts being available on load
   - don't rely on posts being made available in any consistent way
-
-## Non-Goals
-
-- Replace RES
-- Add options for every use-case
