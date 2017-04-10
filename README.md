@@ -10,10 +10,6 @@ Firefox: TODO
 
 Opera: use [this](https://addons.opera.com/en/extensions/details/download-chrome-extension-9/) to install the Chrome extension
 
-## Features
-
-TODO
-
 ## Goals
 
 - No observable loading
