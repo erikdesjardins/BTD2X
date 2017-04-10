@@ -11,8 +11,6 @@ export function watchForElement(selector: string): DefaultStream<HTMLElement> {
 	return stream;
 }
 
-const seenNodes: WeakSet<Node> = new WeakSet();
-
 // after pageload, injected elements need to be queried
 // since the callback will not be called for each child
 let loaded = false;
@@ -22,9 +20,6 @@ new MutationObserver(mutationRecords => {
 	for (const record of mutationRecords) {
 		for (const node of record.addedNodes) {
 			if (node.nodeType !== Node.ELEMENT_NODE) continue;
-
-			if (seenNodes.has(node)) continue;
-			seenNodes.add(node);
 
 			for (const [selector, streams] of selectorMap.entries()) {
 				if (node.matches(selector)) {
