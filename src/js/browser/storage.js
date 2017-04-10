@@ -4,7 +4,7 @@ import { wrapSingleResult } from './utils/wrapper';
 
 const _get = wrapSingleResult((keys, callback) => chrome.storage.sync.get(keys, callback));
 
-export async function get<T>(key: string, defaultVal: T = null): Promise<T> {
+export async function get<T>(key: string, defaultVal: T): Promise<T> {
 	return (await _get({ [key]: defaultVal }))[key];
 }
 
