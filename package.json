@@ -1,7 +1,7 @@
 {
   "title": "BetterThanDesktop2x",
   "name": "BTD2X",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Opinionated, small, fast extension for reddit.",
   "private": true,
   "repository": {
