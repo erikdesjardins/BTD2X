@@ -6,7 +6,7 @@ import { DefaultStream } from './utils/streams';
 const selectorMap: MultiMap<string, DefaultStream<HTMLElement>> = new MultiMap();
 
 export function watchForElement(selector: string): DefaultStream<HTMLElement> {
-	const stream = new DefaultStream(() => selectorMap.delete(selector, stream));
+	const stream = new DefaultStream(() => { selectorMap.delete(selector, stream); });
 	selectorMap.set(selector, stream);
 	return stream;
 }
@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', () => { loaded = true; });
 new MutationObserver(mutationRecords => {
 	for (const record of mutationRecords) {
 		for (const node of record.addedNodes) {
-			if (node.nodeType !== Node.ELEMENT_NODE) continue;
+			if (node.nodeType !== Node.ELEMENT_NODE /*:: || !(node instanceof Element) */) continue;
 
 			for (const [selector, streams] of selectorMap.entries()) {
 				if (node.matches(selector)) {
