@@ -1,7 +1,7 @@
 {
   "title": "BetterThanDesktop2x",
   "name": "BTD2X",
-  "version": "0.0.0",
+  "version": "0.0.3",
   "description": "Opinionated, small, fast extension for reddit.",
   "private": true,
   "repository": {
@@ -20,6 +20,10 @@
     "flow": "flow"
   },
   "devDependencies": {
+    "babel-core": "6.24.1",
+    "babel-eslint": "7.2.1",
+    "babel-loader": "6.4.1",
+    "babel-plugin-transform-flow-strip-types": "6.22.0",
     "chrome-extension-deploy": "3.0.0",
     "cross-env": "4.0.0",
     "eslint": "3.19.0",
@@ -27,7 +31,6 @@
     "eslint-plugin-import": "2.2.0",
     "extricate-loader": "1.0.0",
     "file-loader": "0.11.1",
-    "firefox-extension-deploy": "1.1.0",
     "flow-bin": "0.43.1",
     "inert-entry-webpack-plugin": "2.0.0",
     "interpolate-loader": "1.0.0",

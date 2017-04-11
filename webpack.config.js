@@ -21,6 +21,11 @@ module.exports = ({ production = false, zip = false } = {}) => ({
 				{ loader: 'webpack-rollup-loader' },
 			],
 		}, {
+			test: /\.js$/,
+			use: [
+				{ loader: 'babel-loader' },
+			],
+		}, {
 			test: /\.(png)$/,
 			use: [
 				{ loader: 'file-loader', options: { name: '[name].[ext]' } },

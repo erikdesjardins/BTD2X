@@ -14,6 +14,7 @@
 	},
 	"permissions": [
 		"storage",
+		"contextMenus",
 		"https://*.reddit.com/*"
 	],
 	"background": {
