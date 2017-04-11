@@ -1,6 +1,6 @@
 /* @flow */
 
-import { wrapSingleResult } from './utils/wrapper';
+import { wrapSingleResult } from '../utils/wrapper';
 
 const _get = wrapSingleResult((keys, callback) => chrome.storage.sync.get(keys, callback));
 
