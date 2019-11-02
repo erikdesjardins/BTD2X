@@ -1,14 +1,15 @@
 /* @flow */
 
 import { MultiMap } from '../collections/multimap';
-import { DefaultStream } from './utils/streams';
+import { newAsyncIterable } from './utils/combinators';
 
-const selectorMap: MultiMap<string, DefaultStream<HTMLElement>> = new MultiMap();
+const selectorMap: MultiMap<string, (HTMLElement) => void> = new MultiMap();
 
-export function watchForElement(selector: string): DefaultStream<HTMLElement> {
-	const stream = new DefaultStream(() => { selectorMap.delete(selector, stream); });
-	selectorMap.set(selector, stream);
-	return stream;
+export function watchForElement(selector: string): AsyncIterable<HTMLElement> {
+	return newAsyncIterable(push => {
+		selectorMap.set(selector, push);
+		return () => selectorMap.delete(selector, push);
+	});
 }
 
 // after pageload, injected elements need to be queried
@@ -19,19 +20,19 @@ window.addEventListener('DOMContentLoaded', () => { loaded = true; });
 new MutationObserver(mutationRecords => {
 	for (const record of mutationRecords) {
 		for (const node of record.addedNodes) {
-			if (node.nodeType !== Node.ELEMENT_NODE /*:: || !(node instanceof Element) */) continue;
+			if (node.nodeType !== Node.ELEMENT_NODE /*:: || !(node instanceof HTMLElement) */) continue;
 
-			for (const [selector, streams] of selectorMap.entries()) {
+			for (const [selector, pushers] of selectorMap.entries()) {
 				if (node.matches(selector)) {
-					for (const stream of streams) {
-						stream._accept((node: any));
+					for (const push of pushers) {
+						push(node);
 					}
 				}
 
 				if (loaded) {
 					for (const child of node.querySelectorAll(selector)) {
-						for (const stream of streams) {
-							stream._accept(child);
+						for (const push of pushers) {
+							push(child);
 						}
 					}
 				}

@@ -4,12 +4,12 @@
 	"short_name": "{{prop-loader?name!../package.json}}",
 	"description": "{{prop-loader?description!../package.json}}",
 	"version": "{{prop-loader?version!../package.json}}",
-	"minimum_chrome_version": "57",
-	"minimum_opera_version": "44",
+	"minimum_chrome_version": "77",
+	"minimum_opera_version": "64",
 	"applications": {
 		"gecko": {
 			"id": "BTD2X-unlisted@erikdesjardins.io",
-			"strict_min_version": "53.0"
+			"strict_min_version": "69.0"
 		}
 	},
 	"permissions": [

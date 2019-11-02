@@ -1,11 +1,7 @@
 /* @flow */
 
 export class MultiMap<K, V> {
-	_map: Map<K, V[]>;
-
-	constructor() {
-		this._map = new Map();
-	}
+	_map: Map<K, V[]> = new Map();
 
 	clear() {
 		this._map.clear();

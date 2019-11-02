@@ -13,4 +13,4 @@ suppress_type=$FlowIgnore
 suppress_comment=\\(.\\|\n\\)*\\$FlowIgnore
 
 [version]
-0.43.1
+0.111.1
